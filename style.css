@@ -1,0 +1,302 @@
+body {
+  background-image: url("/images/newBackground.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: url("/images/pawprint-cursor.png"), default;
+  height: 100vh;
+}
+
+#form {
+  display: flex;
+}
+
+/* Added text shadow to the title to make it pop */
+#game-title {
+  font-family: "Pacifico", cursive;
+  font-size: x-large;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  margin: 0px;
+}
+
+#flex-container {
+  /* position: fixed;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  margin-top: 20px;
+}
+
+#game-container {
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  align-content: center;
+  width: 99%;
+}
+
+.smallGrid {
+  grid-template-columns: repeat(3, 5.5em);
+  grid-template-rows: repeat(4, 5.5em);
+}
+
+.bigGrid {
+  grid-template-columns: repeat(4, 5.5em);
+  grid-template-rows: repeat(5, 5.5em);
+}
+
+#start-button {
+  background-image: url("/images/start-button.png");
+  height: 50px;
+  width: 75px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+/* Added text shadow to the timer to make it pop */
+#timerDisplay {
+  position: relative;
+  font-size: xx-large;
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 2px 5px gray;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+#reset-button {
+  background-image: url("/images/reset-button.png");
+  height: 50px;
+  width: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+/* Added spacing and centered additional buttons - Ren */
+#difficulty-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#easy {
+  background-image: url("/images/hard\ \(2\).png");
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: 1px solid brown;
+  border-radius: 20%;
+  margin: 0px;
+  cursor: pointer;
+}
+
+#hard {
+  background-image: url("/images/hard\ \(1\).png");
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: 1px solid brown;
+  border-radius: 20%;
+  margin: 0px;
+  cursor: pointer;
+}
+
+#change-difficulty {
+  background-image: url("/images/change-difficulty.png");
+  height: 50px;
+  width: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.images {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-front {
+  background-color: orange;
+  color: black;
+}
+
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+.toggle-card {
+  transform: rotateY(180deg);
+}
+
+/* Added text shadow to the writing to make it pop */
+/* Also added a smaller size to the font to make it sit on one line in mobile version */
+
+/* added flex-direction here to stack text and dog, we can chat on if we want her to have a fixed size -KJ*/
+#you-won {
+  display: none;
+  flex-direction: column;
+  font-family: "Pacifico", cursive;
+  font-size: x-large;
+  text-align: center;
+  text-shadow: 2px 2px 5px gray;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 7s;
+  -webkit-animation: fadeIn 7s;
+  -moz-animation: fadeIn 7s;
+  -o-animation: fadeIn 7s;
+  -ms-animation: fadeIn 7s;
+}
+
+/* Made the dog picture smaller and postioned it center */
+#hotdogDog {
+  height: 50%;
+  width: 50%;
+  transform: translate(50%, 0);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  #game-title {
+    font-size: xx-large;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    /* perspective: 800px; */
+  }
+
+  #start-button {
+    height: 100px;
+    width: 150px;
+  }
+
+  #reset-button {
+    height: 100px;
+    width: 150px;
+  }
+
+  /* Added button size media queries - Ren */
+  #easy {
+    height: 100px;
+    width: 100px;
+  }
+
+  #hard {
+    height: 100px;
+    width: 100px;
+  }
+
+  #change-difficulty {
+    height: 100px;
+    width: 125px;
+  }
+
+  .bigGrid {
+    grid-template-columns: repeat(4, 9em);
+    grid-template-rows: repeat(4, 9em);
+  }
+
+  .smallGrid {
+    grid-template-columns: repeat(4, 9em);
+    grid-template-rows: repeat(5, 9em);
+  }
+  #game-container {
+    gap: 10px;
+  }
+
+  #you-won {
+    font-size: xx-large;
+  }
+
+  /* #flex-container {
+    margin-top: 125px;
+  } */
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>2022 Pawlympics Memory Game</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="game-title">2022 Pawlympics Memory Game</h1>
+      <form id="form">
+      <button id="start-button" type="button"></button>
+      <!-- Hide once game starts-->
+      <div id="timerDisplay">00 : 00</div>
+      <button id="reset-button" type="reset"></button>
+      <!-- Hide until game starts-->
+    </div>
+    <!-- Created new div to space and center additional buttons - Ren -->
+    <div id="difficulty-container">
+      <button id="easy"></button>
+      <button id="change-difficulty"></button>
+      <button id="hard"></button>
+    </div>
+    <div id="flex-container"><!-- Timer here, on opposite side of page from buttons-->
+    <div id="game-container"></div>
+    <!-- 12 cards total -->
+    </div>
+    <!-- added image to you-won below -->
+    <div id="you-won">Well, hot dog! You're a winner!
+      <img id="hotdogDog" src="/images/Untitled design (2).png" alt="Dog and hotdogs">
+      <audio id="catSong">
+        <source src="/images/Cat Song.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </form>
+    <script src="script.js"></script>
+  </body>
+</html>
